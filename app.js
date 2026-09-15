@@ -1,7 +1,14 @@
 const express = require("express");
+const bodyParser = require('body-parser');
+
 const app = express();
 
+
 const port = 3000;
+
+
+// parse application/json
+app.use(bodyParser.json());
 
 // nodejs core API
 // Event emitter
@@ -20,6 +27,17 @@ app.get("/", (req, res) => {
     data: {
       status: 200,
       message: "Welcome to the node js world",
+    },
+  });
+});
+
+app.post('/', (req, res) => {
+  console.log('Got a POST request');
+  console.log('Request body:', req.body);
+  res.json({
+    data: {
+      status: 200,
+      message: {data: req.body},
     },
   });
 });
