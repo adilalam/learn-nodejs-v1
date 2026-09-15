@@ -1,0 +1,25 @@
+{
+  "name": "learn-nodejs",
+  "version": "1.0.0",
+  "description": "we are learning node js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "file",
+    "system",
+    "event",
+    "emiiter",
+    "buffer"
+  ],
+  "author": "adil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
